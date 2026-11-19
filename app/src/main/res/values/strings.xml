@@ -203,5 +203,8 @@
     <string name="open_nav">Open Navigation Drawer</string>
     <string name="close_nav">Close Navigation Drawer</string>
 
+    <string name="app_id">ca-app-pub-2279004909455132~3253217740</string>
+    <string name="banner_ad_unit_id">ca-app-pub-2279004909455132/1145929155</string>
+
 
 </resources>
