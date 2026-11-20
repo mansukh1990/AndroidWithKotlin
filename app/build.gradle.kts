@@ -67,6 +67,7 @@ dependencies {
 
     //for ads
     implementation(libs.play.services.ads)
+    implementation(libs.play.services.auth)
 
     implementation ("androidx.navigation:navigation-fragment-ktx:2.3.5")
     implementation ("androidx.navigation:navigation-ui-ktx:2.3.5")

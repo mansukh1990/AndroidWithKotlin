@@ -205,6 +205,7 @@
 
     <string name="app_id">ca-app-pub-2279004909455132~3253217740</string>
     <string name="banner_ad_unit_id">ca-app-pub-2279004909455132/1145929155</string>
+    <string name="str_google">Google</string>
 
 
 </resources>

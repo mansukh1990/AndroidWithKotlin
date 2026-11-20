@@ -289,18 +289,6 @@
         <activity
             android:name=".AndroidWithKotlin.firebase.firebaseauth.SignInActivity"
             android:exported="true"
-            android:windowSoftInputMode="adjustResize"></activity>
-        <activity
-            android:name=".AndroidWithKotlin.firebase.firebaseauth.SignUpActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".AndroidWithKotlin.firebase.signupLoginFirebaseRealtime.SigninFirebaseRealtimeActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize"></activity>
-        <activity
-            android:name=".AndroidWithKotlin.firebase.signupLoginFirebaseRealtime.LoginFirebaseRealtimeActivity"
-            android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -309,11 +297,27 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".AndroidWithKotlin.firebase.firebaseauth.SignUpActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".AndroidWithKotlin.firebase.signupLoginFirebaseRealtime.SigninFirebaseRealtimeActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".AndroidWithKotlin.firebase.signupLoginFirebaseRealtime.LoginFirebaseRealtimeActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity
             android:name=".AndroidWithKotlin.firebase.signupLoginFirebaseRealtime.ProfileFirebaseRealtimeActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".AndroidWithKotlin.firebase.signupLoginFirebaseRealtime.EditProfileFirebaseRealtimeActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".AndroidWithKotlin.firebase.firebaseauth.GoogleMainActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>

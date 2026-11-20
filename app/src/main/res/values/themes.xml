@@ -84,5 +84,14 @@
         <item name="android:singleLine">true</item>
     </style>
 
+    <style name="buttonAuthStyle">
+        <item name="android:padding">@dimen/_12sdp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:gravity">center</item>
+        <item name="backgroundTint">@color/colorPrimaryDark</item>
+        <item name="android:background">@drawable/bg_button_solid</item>
+    </style>
+
 
 </resources>

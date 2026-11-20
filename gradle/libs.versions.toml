@@ -16,6 +16,7 @@ firebaseMessaging = "26.0.2"
 activityKtx = "1.13.0"
 firebaseDatabase = "23.0.0"
 playServicesAds = "25.5.0"
+playServicesAuth = "21.3.0"
 firebaseAuth = "25.0.0"
 credentials = "1.6.0"
 credentialsPlayServicesAuth = "1.6.0"
@@ -38,6 +39,7 @@ firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging
 androidx-activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activityKtx" }
 firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
 play-services-ads  = {group="com.google.android.gms",name="play-services-ads",version.ref="playServicesAds"}
+play-services-auth = { group = "com.google.android.gms", name = "play-services-auth", version.ref = "playServicesAuth" }
 firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
 androidx-credentials = { group = "androidx.credentials", name = "credentials", version.ref = "credentials" }
 androidx-credentials-play-services-auth = { group = "androidx.credentials", name = "credentials-play-services-auth", version.ref = "credentialsPlayServicesAuth" }

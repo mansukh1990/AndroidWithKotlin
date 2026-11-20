@@ -55,5 +55,6 @@ class SignUpActivity : AppCompatActivity() {
     private fun gotoSignInActivity() {
         val intent = Intent(this, SignInActivity::class.java)
         startActivity(intent)
+
     }
 }
