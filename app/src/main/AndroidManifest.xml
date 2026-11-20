@@ -285,11 +285,21 @@
         <activity
             android:name=".AndroidWithKotlin.firebase.FirebaseMessageServiceActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize">
-
-        </activity>
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".AndroidWithKotlin.firebase.firebaseauth.SignInActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity
+            android:name=".AndroidWithKotlin.firebase.firebaseauth.SignUpActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".AndroidWithKotlin.firebase.signupLoginFirebaseRealtime.SigninFirebaseRealtimeActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity
+            android:name=".AndroidWithKotlin.firebase.signupLoginFirebaseRealtime.LoginFirebaseRealtimeActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -297,14 +307,15 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
-            android:name=".AndroidWithKotlin.firebase.firebaseauth.SignUpActivity"
+            android:name=".AndroidWithKotlin.firebase.signupLoginFirebaseRealtime.ProfileFirebaseRealtimeActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize" >
-
-        </activity>
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".AndroidWithKotlin.firebase.signupLoginFirebaseRealtime.EditProfileFirebaseRealtimeActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>
