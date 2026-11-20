@@ -6,18 +6,19 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.credentials.ClearCredentialStateRequest
+import androidx.credentials.CredentialManager
+import androidx.lifecycle.lifecycleScope
 import com.example.androidwithkotlin.R
 import com.example.androidwithkotlin.databinding.ActivityGoogleMainBinding
-import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInClient
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
+import kotlinx.coroutines.launch
 
 class GoogleMainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityGoogleMainBinding
     private lateinit var firebaseAuth: FirebaseAuth
-    private lateinit var googleSignInClient: GoogleSignInClient
+    private lateinit var credentialManager: CredentialManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,24 +32,28 @@ class GoogleMainActivity : AppCompatActivity() {
         }
 
         firebaseAuth = FirebaseAuth.getInstance()
-
-        val googleSignInOptions = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(getString(R.string.default_web_client_id))
-            .requestEmail()
-            .build()
-        googleSignInClient = GoogleSignIn.getClient(this, googleSignInOptions)
+        credentialManager = CredentialManager.create(this)
 
         getGoogleData()
 
         binding.signOutBtn.setOnClickListener {
-            firebaseAuth.signOut()
-            googleSignInClient.signOut().addOnCompleteListener {
-                val intent = Intent(this, SignInActivity::class.java).apply {
-                    flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                }
-                startActivity(intent)
-                finish()
+            signOut()
+        }
+    }
+
+    private fun signOut() {
+        firebaseAuth.signOut()
+        lifecycleScope.launch {
+            try {
+                credentialManager.clearCredentialState(ClearCredentialStateRequest())
+            } catch (e: Exception) {
+                // Ignore clear credential exception
             }
+            val intent = Intent(this@GoogleMainActivity, SignInActivity::class.java).apply {
+                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            }
+            startActivity(intent)
+            finish()
         }
     }
 

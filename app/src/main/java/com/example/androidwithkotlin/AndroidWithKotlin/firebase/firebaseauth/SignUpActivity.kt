@@ -26,17 +26,19 @@ class SignUpActivity : AppCompatActivity() {
         }
 
         binding.buttonSignup.setOnClickListener {
-            val email = binding.emailEt.text.toString()
-            val pass = binding.passET.text.toString()
-            val confirmPass = binding.confirmPassEt.text.toString()
+            val email = binding.emailEt.text.toString().trim()
+            val pass = binding.passET.text.toString().trim()
+            val confirmPass = binding.confirmPassEt.text.toString().trim()
 
             if (email.isNotEmpty() && pass.isNotEmpty() && confirmPass.isNotEmpty()) {
-                if (pass.equals(confirmPass)) {
-                    firebaseAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener {
-                        if (it.isSuccessful) {
-                            gotoSignInActivity()
+                if (pass == confirmPass) {
+                    firebaseAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener { task ->
+                        if (task.isSuccessful) {
+                            firebaseAuth.signOut()
+                            Toast.makeText(this, "Sign up successful! Please sign in.", Toast.LENGTH_SHORT).show()
+                            gotoSignInActivity(email)
                         } else {
-                            Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this, task.exception?.message ?: "Sign up failed", Toast.LENGTH_SHORT).show()
                         }
                     }
                 } else {
@@ -52,9 +54,13 @@ class SignUpActivity : AppCompatActivity() {
         }
     }
 
-    private fun gotoSignInActivity() {
-        val intent = Intent(this, SignInActivity::class.java)
+    private fun gotoSignInActivity(email: String = "") {
+        val intent = Intent(this, SignInActivity::class.java).apply {
+            if (email.isNotEmpty()) {
+                putExtra("email", email)
+            }
+        }
         startActivity(intent)
-
+        finish()
     }
 }
