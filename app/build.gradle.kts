@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id("com.google.gms.google-services")
+    kotlin("plugin.serialization") version "2.0.21"
 }
 
 android {
@@ -33,18 +34,20 @@ android {
         viewBinding = true
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
 }
 
 kotlin {
     compilerOptions {
-        jvmTarget.set(JvmTarget.JVM_1_8)
+        jvmTarget.set(JvmTarget.JVM_11)
     }
 }
 
 dependencies {
+
+    val nav_version = "2.10.2"
 
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.core.ktx)
@@ -80,5 +83,9 @@ dependencies {
     implementation ("com.intuit.sdp:sdp-android:1.1.1")
     implementation(platform("com.google.firebase:firebase-bom:35.2.0"))
     implementation("com.google.firebase:firebase-analytics")
+
+    // Views/Fragments integration
+    implementation("androidx.navigation:navigation-fragment:${nav_version}")
+    implementation("androidx.navigation:navigation-ui:${nav_version}")
 
 }

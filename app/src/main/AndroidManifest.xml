@@ -288,14 +288,8 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".AndroidWithKotlin.firebase.firebaseauth.SignInActivity"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"></activity>
         <activity
             android:name=".AndroidWithKotlin.firebase.firebaseauth.SignUpActivity"
             android:exported="false"
@@ -306,8 +300,8 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".AndroidWithKotlin.firebase.signupLoginFirebaseRealtime.LoginFirebaseRealtimeActivity"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize"></activity>
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".AndroidWithKotlin.firebase.signupLoginFirebaseRealtime.ProfileFirebaseRealtimeActivity"
             android:exported="false"
@@ -320,6 +314,28 @@
             android:name=".AndroidWithKotlin.firebase.firebaseauth.GoogleMainActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".AndroidWithKotlin.firebase.phoneauth.PhoneAuthMainActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".AndroidWithKotlin.firebase.phoneauth.PhoneActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize|adjustPan"></activity>
+        <activity
+            android:name=".AndroidWithKotlin.firebase.phoneauth.OTPActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize|adjustPan" />
+        <activity
+            android:name=".AndroidWithKotlin.firebase.firebaserealtimedatabaseloginsignuptodo.FirebaseRealtimeToDoActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

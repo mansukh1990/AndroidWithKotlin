@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    tools:context=".AndroidWithKotlin.firebase.phoneauth.OTPActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="0dp"
+            android:layout_height="220dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/otp_verification" />
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="OTP Verification"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/subtitleTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Enter the 6-digit code sent to your phone"
+            android:textColor="@color/grey"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+        <ProgressBar
+            android:id="@+id/otpProgressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:indeterminateTint="@color/btn_color"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/subtitleTextView" />
+
+        <EditText
+            android:id="@+id/otpEditText1"
+            android:layout_width="46dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edit_text_bg"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="0"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/otpEditText2"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/otpProgressBar" />
+
+        <EditText
+            android:id="@+id/otpEditText2"
+            android:layout_width="46dp"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_text_bg"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="0"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/otpEditText1"
+            app:layout_constraintEnd_toStartOf="@+id/otpEditText3"
+            app:layout_constraintStart_toEndOf="@+id/otpEditText1"
+            app:layout_constraintTop_toTopOf="@+id/otpEditText1" />
+
+        <EditText
+            android:id="@+id/otpEditText3"
+            android:layout_width="46dp"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_text_bg"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="0"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/otpEditText1"
+            app:layout_constraintEnd_toStartOf="@+id/otpEditText4"
+            app:layout_constraintStart_toEndOf="@+id/otpEditText2"
+            app:layout_constraintTop_toTopOf="@+id/otpEditText1" />
+
+        <EditText
+            android:id="@+id/otpEditText4"
+            android:layout_width="46dp"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_text_bg"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="0"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/otpEditText1"
+            app:layout_constraintEnd_toStartOf="@+id/otpEditText5"
+            app:layout_constraintStart_toEndOf="@+id/otpEditText3"
+            app:layout_constraintTop_toTopOf="@+id/otpEditText1" />
+
+        <EditText
+            android:id="@+id/otpEditText5"
+            android:layout_width="46dp"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_text_bg"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="0"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/otpEditText1"
+            app:layout_constraintEnd_toStartOf="@+id/otpEditText6"
+            app:layout_constraintStart_toEndOf="@+id/otpEditText4"
+            app:layout_constraintTop_toTopOf="@+id/otpEditText1" />
+
+        <EditText
+            android:id="@+id/otpEditText6"
+            android:layout_width="46dp"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_text_bg"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="0"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/otpEditText1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/otpEditText5"
+            app:layout_constraintTop_toTopOf="@+id/otpEditText1" />
+
+        <TextView
+            android:id="@+id/resendTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="8dp"
+            android:text="Resend OTP in 60s"
+            android:textColor="@color/grey"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/otpEditText1" />
+
+        <Button
+            android:id="@+id/verifyOTPBtn"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="@color/btn_color"
+            android:text="Verify"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resendTextView"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
