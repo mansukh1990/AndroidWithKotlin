@@ -207,5 +207,10 @@
     <string name="banner_ad_unit_id">ca-app-pub-2279004909455132/1145929155</string>
     <string name="str_google">Google</string>
 
+    <string name="enter_your_email">Enter Your Email .....</string>
+    <string name="enter_your_pass">Enter Your Password .....</string>
+    <string name="re_enter_your_pass">Re-enter Your Password .....</string>
+    <string name="type_your_task">Type your task .....</string>
+
 
 </resources>

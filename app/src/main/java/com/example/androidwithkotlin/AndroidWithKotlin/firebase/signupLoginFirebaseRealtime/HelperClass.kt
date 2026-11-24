@@ -7,3 +7,8 @@ data class SignupRequest(
     var password: String? = null
 )
 
+data class SignupToDoRequest(
+    var email: String? = null,
+    var password: String? = null
+)
+

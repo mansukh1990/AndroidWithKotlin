@@ -1,3 +1,5 @@
+import org.gradle.kotlin.dsl.annotationProcessor
+import org.gradle.kotlin.dsl.implementation
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -47,6 +49,7 @@ kotlin {
 
 dependencies {
 
+    implementation(libs.firebase.firestore)
     val nav_version = "2.10.2"
 
     implementation(libs.androidx.activity.ktx)
@@ -83,9 +86,13 @@ dependencies {
     implementation ("com.intuit.sdp:sdp-android:1.1.1")
     implementation(platform("com.google.firebase:firebase-bom:35.2.0"))
     implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-storage")
 
     // Views/Fragments integration
     implementation("androidx.navigation:navigation-fragment:${nav_version}")
     implementation("androidx.navigation:navigation-ui:${nav_version}")
+
+    implementation("com.github.bumptech.glide:glide:4.14.2")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.14.2")
 
 }
