@@ -289,7 +289,7 @@
         <activity
             android:name=".AndroidWithKotlin.firebase.firebaseauth.SignInActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"></activity>
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".AndroidWithKotlin.firebase.firebaseauth.SignUpActivity"
             android:exported="false"
@@ -321,21 +321,33 @@
         <activity
             android:name=".AndroidWithKotlin.firebase.phoneauth.PhoneActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize|adjustPan"></activity>
+            android:windowSoftInputMode="adjustResize|adjustPan" />
         <activity
             android:name=".AndroidWithKotlin.firebase.phoneauth.OTPActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize|adjustPan" />
         <activity
             android:name=".AndroidWithKotlin.firebase.firebaserealtimedatabaseloginsignuptodo.FirebaseRealtimeToDoActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize|adjustPan" />
+        <activity
+            android:name=".AndroidWithKotlin.firebase.firebasepdf.FirebasePdfActivity"
             android:exported="true"
-            android:windowSoftInputMode="adjustResize|adjustPan">
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".AndroidWithKotlin.firebase.firebasepdf.AllPdfActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".AndroidWithKotlin.firebase.firebasepdf.PdfViewActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

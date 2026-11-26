@@ -26,4 +26,6 @@
     <color name="hint_text_color">#D4D4D4</color>
 
     <color name="secondary_color">#D5CEFF</color>
+    <color name="primary_color">#517593</color>
+
 </resources>

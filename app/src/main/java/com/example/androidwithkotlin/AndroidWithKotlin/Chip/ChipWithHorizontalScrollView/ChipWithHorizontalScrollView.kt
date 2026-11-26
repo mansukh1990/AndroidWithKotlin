@@ -12,8 +12,7 @@ class ChipWithHorizontalScrollView : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityChipWithHorizontalScrollViewBinding.inflate(layoutInflater)
-        val view = binding.root
-        setContentView(view)
+        setContentView(binding.root)
 
         setupChipS()
     }

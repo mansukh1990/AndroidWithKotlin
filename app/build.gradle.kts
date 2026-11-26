@@ -94,5 +94,7 @@ dependencies {
 
     implementation("com.github.bumptech.glide:glide:4.14.2")
     annotationProcessor("com.github.bumptech.glide:compiler:4.14.2")
+    implementation("androidx.lifecycle:lifecycle-runtime:2.11.1")
+    implementation("com.github.mhiew:android-pdf-viewer:3.2.0-beta.3")
 
 }
