@@ -332,13 +332,8 @@
             android:windowSoftInputMode="adjustResize|adjustPan" />
         <activity
             android:name=".AndroidWithKotlin.firebase.firebasepdf.FirebasePdfActivity"
-            android:exported="true"
+            android:exported="false"
             android:windowSoftInputMode="adjustResize">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".AndroidWithKotlin.firebase.firebasepdf.AllPdfActivity"
@@ -348,6 +343,16 @@
             android:name=".AndroidWithKotlin.firebase.firebasepdf.PdfViewActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".AndroidWithKotlin.Roomdatabase.RoomDatabaseMainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

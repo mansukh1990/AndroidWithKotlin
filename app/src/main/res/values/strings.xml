@@ -43,7 +43,6 @@
         unable to decide which view to scroll. This is where NestedScrollView comes into role.
     </string>
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tutorial_by">Tutorial By Tutorialwing.com</string>
     <string name="first_fragment">First Fragment</string>
     <string name="second_fragment">Second Fragment</string>
@@ -212,6 +211,12 @@
     <string name="re_enter_your_pass">Re-enter Your Password .....</string>
     <string name="type_your_task">Type your task .....</string>
     <string name="no_pdf_file_selected_yet">No PDF File Selected yet !</string>
+
+    <string name="person_name">Person Name</string>
+    <string name="person_age">Person Age</string>
+    <string name="person_city">Person City</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

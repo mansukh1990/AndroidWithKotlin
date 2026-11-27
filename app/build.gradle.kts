@@ -5,6 +5,8 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.ksp.android)
+    alias(libs.plugins.kotlin.parcelize)
     id("com.google.gms.google-services")
     kotlin("plugin.serialization") version "2.0.21"
 }
@@ -44,6 +46,7 @@ android {
 kotlin {
     compilerOptions {
         jvmTarget.set(JvmTarget.JVM_11)
+        freeCompilerArgs.add("-Xskip-metadata-version-check")
     }
 }
 
@@ -96,5 +99,9 @@ dependencies {
     annotationProcessor("com.github.bumptech.glide:compiler:4.14.2")
     implementation("androidx.lifecycle:lifecycle-runtime:2.11.1")
     implementation("com.github.mhiew:android-pdf-viewer:3.2.0-beta.3")
+
+    //room
+    implementation(libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler)
 
 }
